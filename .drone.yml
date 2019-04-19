@@ -5,7 +5,7 @@ steps:
 - name: test-busybox
   image: busybox
   commands:
-  - echo "Hello World"
+  - echo "Hello World!"
   when:
     event:
     - push
