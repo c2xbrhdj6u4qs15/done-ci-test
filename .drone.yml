@@ -12,8 +12,9 @@ steps:
     AWS_SECRET_ACCESS_KEY:
       from_secret: aws_secret_access_key
   commands:
-    - ls -l /data
-    - /data/run.sh
+    - ls -l
+    - pwd
+    - find . -type f -name "run.sh"
   # - aws --version
   # - aws s3 ls
   # - echo "Build Number ${DRONE_BUILD_NUMBER}"
