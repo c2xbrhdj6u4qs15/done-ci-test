@@ -2,10 +2,10 @@ kind: pipeline
 name: default
 
 steps:
-- name: test-busybox
-  image: busybox
+- name: aws
+  image: amazonlinux
   commands:
-  - echo "Hello World! This my first Drone-CI"
+  - aws --version
   when:
     event:
     - push
