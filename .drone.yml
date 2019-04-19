@@ -15,8 +15,8 @@ steps:
     - ls -l
     - pwd
     - find . -type f -name "run.sh"
-    - which bash
-    - which sh
+    - find / -name "bash"
+    - whereis sh
   # - aws --version
   # - aws s3 ls
   # - echo "Build Number ${DRONE_BUILD_NUMBER}"
