@@ -3,20 +3,17 @@ name: default
 
 steps:
 - name: aws
-  # image: mesosphere/aws-cli
-  image: alpine
+  image: mesosphere/aws-cli
   environment:
     AWS_DEFAULT_REGION: eu-west-1
     AWS_ACCESS_KEY_ID:
       from_secret: aws_access_key
     AWS_SECRET_ACCESS_KEY:
       from_secret: aws_secret_access_key
-  script:
-    - ./run.sh
-  # commands:
-  # - aws --version
-  # - aws s3 ls
-  # - echo "Build Number ${DRONE_BUILD_NUMBER}"
+  commands:
+  - aws --version
+  - aws s3 ls
+  - echo "Build Number ${DRONE_BUILD_NUMBER}"
   when:
     event:
     - push
