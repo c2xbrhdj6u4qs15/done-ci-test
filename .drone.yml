@@ -10,10 +10,12 @@ steps:
       from_secret: aws_access_key
     AWS_SECRET_ACCESS_KEY:
       from_secret: aws_secret_access_key
-  commands:
-  - aws --version
-  - aws s3 ls
-  - echo "Build Number ${DRONE_BUILD_NUMBER}"
+  script:
+    - ./run.sh
+  # commands:
+  # - aws --version
+  # - aws s3 ls
+  # - echo "Build Number ${DRONE_BUILD_NUMBER}"
   when:
     event:
     - push
