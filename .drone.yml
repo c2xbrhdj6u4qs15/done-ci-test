@@ -3,7 +3,7 @@ name: default
 
 steps:
 - name: aws
-  image: amazonlinux
+  image: mesosphere/aws-cli
   commands:
   - aws --version
   when:
