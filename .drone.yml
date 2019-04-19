@@ -6,3 +6,9 @@ steps:
   image: busybox
   commands:
   - echo "Hello World"
+  when:
+    event:
+    - push
+  when:
+    branch:
+    - master
