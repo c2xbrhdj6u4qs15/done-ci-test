@@ -12,9 +12,6 @@ steps:
     AWS_SECRET_ACCESS_KEY:
       from_secret: aws_secret_access_key
   commands:
-    - ls -l
-    - pwd
-    - find . -type f -name "run.sh"
     - ./run.sh
   # - aws --version
   # - aws s3 ls
