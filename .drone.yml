@@ -13,6 +13,7 @@ steps:
   commands:
   - aws --version
   - aws s3 ls
+  - echo "Build Number ${DRONE_BUILD_NUMBER}"
   when:
     event:
     - push
